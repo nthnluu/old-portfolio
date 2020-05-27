@@ -1,0 +1,48 @@
+/*purgecss start ignore*/
+@tailwind base;
+@tailwind components;
+/*purgecss end ignore*/
+
+:root {
+    --b-margin: 64px;
+    --border-rad: 36px;
+}
+
+body {
+    background-color: #F2F8FF
+}
+
+.hero-backdrop {
+    border-bottom-left-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
+    background-color: white;
+    box-shadow: rgba(209, 230, 255, 0.57) 0px 2px 24px 1px;
+    margin-bottom: var(--b-margin);
+}
+
+.mini-button {
+    @apply bg-gray-300 rounded-full w-12 h-12 transition-all duration-200
+}
+
+.mini-button:hover {
+    background-color: #f0f3f7;
+}
+
+.mini-button:focus {
+    outline: 0;
+}
+
+.section-heading {
+    margin-bottom: calc(var(--b-margin) / 3);
+    @apply text-3xl font-semibold text-gray-600
+}
+
+.skills-backdrop {
+    border-radius: var(--border-rad);
+    background-color: white;
+    box-shadow: rgba(209, 230, 255, 0.57) 0px 2px 24px 1px;
+    margin-bottom: var(--b-margin);
+}
+
+
+@tailwind utilities;
