@@ -3,14 +3,20 @@ export default function HeroBanner(props) {
         <div className="w-full mb-8 md:mb-0">
             <div className="md:float-right mb-4">
                 <div>
-                    <button className="mini-button mr-4">
-                        <i className="fab fa-github text-xl mt-1"></i>
+                    <button className="mini-button mr-4" onClick={() => {
+                        location.href = 'https://github.com/nthnluu';
+                    }}>
+                        <i className="fab fa-github text-xl mt-1"/>
                     </button>
-                    <button className="mini-button mr-4">
-                        <i className="fab fa-twitter text-xl mt-1"></i>
+                    <button className="mini-button mr-4" onClick={() => {
+                        location.href = 'https://twitter.com/nthnluu';
+                    }}>
+                        <i className="fab fa-twitter text-xl mt-1"/>
                     </button>
-                    <button className="mini-button mr-4">
-                        <i className="fab fa-linkedin-in text-xl mt-1"></i>
+                    <button className="mini-button mr-4" onClick={() => {
+                        location.href = 'https://www.linkedin.com/in/nathan-luu-18a51b68/';
+                    }}>
+                        <i className="fab fa-linkedin-in text-xl mt-1"/>
                     </button>
                 </div>
             </div>
@@ -26,7 +32,7 @@ export default function HeroBanner(props) {
 
 export function Skill(props) {
     return (<div className="text-center">
-        <img className="w-32 h-32 mx-auto" style={{borderRadius: '36px'}} src={props.img}/>
+        <img alt="" className="w-32 h-32 mx-auto" style={{borderRadius: '36px'}} src={props.img}/>
         <h4 className="font-semibold text-xl text-gray-800 mt-4 mt-8">{props.title}</h4>
     </div>);
 
