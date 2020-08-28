@@ -25,7 +25,7 @@ export default () => (
             </div>
             <div className="relative mx-auto">
                 <div className="text-center">
-                    <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
+                    <h2 className="text-3xl leading-9 tracking-tight font-bold text-gray-800 sm:text-4xl sm:leading-10">
                         Projects
                     </h2>
                 </div>

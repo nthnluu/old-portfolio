@@ -33,7 +33,7 @@ export default function HeroBanner(props) {
 export function Skill(props) {
     return (<div className="text-center">
         <img alt="" className="w-32 h-32 mx-auto" style={{borderRadius: '36px'}} src={props.img}/>
-        <h4 className="font-medium text-xl text-gray-800 mt-4 mt-8">{props.title}</h4>
+        <h4 className="font-medium text-base md:text-lg lg:text-xl text-gray-800 mt-4 mt-8">{props.title}</h4>
     </div>);
 
 }
