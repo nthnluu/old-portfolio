@@ -9,14 +9,14 @@
 }
 
 body {
-    background-color: #F2F8FF
+    background-color: #ffff
 }
 
 .hero-backdrop {
     border-bottom-left-radius: var(--border-rad);
     border-bottom-right-radius: var(--border-rad);
     background-color: white;
-    box-shadow: rgba(209, 230, 255, 0.57) 0px 2px 24px 1px;
+    /*box-shadow: rgba(209, 230, 255, 0.57) 0px 2px 24px 1px;*/
     margin-bottom: var(--b-margin);
 }
 
@@ -40,7 +40,7 @@ body {
 .skills-backdrop {
     border-radius: var(--border-rad);
     background-color: white;
-    box-shadow: rgba(209, 230, 255, 0.57) 0px 2px 24px 1px;
+    box-shadow: rgba(188, 194, 208, 0.57) 0px 2px 24px 1px;
     margin-bottom: var(--b-margin);
 }
 

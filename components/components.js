@@ -1,5 +1,5 @@
 export default function HeroBanner(props) {
-    return <div className="hero-backdrop leading-relaxed text-gray-800 p-10 md:p-16">
+    return <div className="hero-backdrop leading-relaxed text-gray-800 py-16 px-6 lg:px-0">
         <div className="w-full mb-8 md:mb-0">
             <div className="md:float-right mb-4">
                 <div>
@@ -33,7 +33,7 @@ export default function HeroBanner(props) {
 export function Skill(props) {
     return (<div className="text-center">
         <img alt="" className="w-32 h-32 mx-auto" style={{borderRadius: '36px'}} src={props.img}/>
-        <h4 className="font-semibold text-xl text-gray-800 mt-4 mt-8">{props.title}</h4>
+        <h4 className="font-medium text-xl text-gray-800 mt-4 mt-8">{props.title}</h4>
     </div>);
 
 }
