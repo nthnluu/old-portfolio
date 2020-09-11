@@ -1,7 +1,7 @@
 function HeroBanner() {
     return <div className="hero-backdrop leading-relaxed py-24 text-gray-800">
         <h1 className="text-xl">Hello! 👋 My name is</h1>
-        <div className="text-5xl font-bold leading-tight">
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             <h2 className="">Nathan Benavides-Luu.</h2>
             <h3>I build things for the web.</h3>
         </div>

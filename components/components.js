@@ -1,6 +1,6 @@
 export default function HeroBanner(props) {
     return <div className="hero-backdrop leading-relaxed text-gray-800 py-16 px-6 lg:px-0">
-        <div className="w-full mb-8 md:mb-0">
+        <div className="w-full mb-4 md:mb-0">
             <div className="md:float-right mb-4">
                 <div>
                     <button className="mini-button mr-4" onClick={() => {
@@ -18,11 +18,16 @@ export default function HeroBanner(props) {
                     }}>
                         <i className="fab fa-linkedin-in text-xl mt-1"/>
                     </button>
+                    <button className="mini-button mr-4" onClick={() => {
+                        location.href = 'https://sheetroom.s3.amazonaws.com/Resume.pdf';
+                    }}>
+                        <i className="fas fa-file text-xl mt-1"/>
+                    </button>
                 </div>
             </div>
         </div>
         <h1 className="text-xl">{props.h1}</h1>
-        <div className="text-5xl font-bold leading-snug">
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
             <h2 className="">{props.h2}</h2>
             <h3>{props.h3}</h3>
         </div>
