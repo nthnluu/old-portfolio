@@ -18,11 +18,11 @@ export default function HeroBanner(props) {
                     }}>
                         <i className="fab fa-linkedin-in text-xl mt-1"/>
                     </button>
-                    <button className="mini-button mr-4" onClick={() => {
-                        location.href = 'https://sheetroom.s3.amazonaws.com/Resume.pdf';
-                    }}>
-                        <i className="fas fa-file text-xl mt-1"/>
-                    </button>
+                    {/*<button className="mini-button mr-4" onClick={() => {*/}
+                    {/*    location.href = 'https://sheetroom.s3.amazonaws.com/Resume.pdf';*/}
+                    {/*}}>*/}
+                    {/*    <i className="fas fa-file text-xl mt-1"/>*/}
+                    {/*</button>*/}
                 </div>
             </div>
         </div>
