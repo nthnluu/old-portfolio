@@ -24,14 +24,14 @@ export default () => (
                 <div className="bg-white h-1/3 sm:h-2/3"></div>
             </div>
             <div className="relative mx-auto">
-                <div className="text-center">
+                <div className="text-left">
                     <h2 className="text-3xl leading-9 tracking-tight font-bold text-gray-800 sm:text-4xl sm:leading-10">
                         Projects
                     </h2>
                 </div>
                 <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none">
+                    <BlogCard title="Venture at Brown" desc="A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill." category="Web Dev" img="https://ventureatbrown.com/placeholder_bear.svg" link="https://ventureatbrown.com/"/>
                     <BlogCard title="Sheetroom" desc="An online platform for designing beautiful online assignments." category="Web Dev" img="/sheetroom_ss.png" link="https://www.sheetroom.com"/>
-                    <BlogCard title="Say Their Names" desc="A place to commemorate members of the Black community who have died to racial injustice." category="Web Dev" img="/saytheinames_ss.png" link="https://saytheirnames.io/"/>
                 </div>
             </div>
         </div>
