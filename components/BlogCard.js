@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ({title, desc, category, img, link}){
-    return <div className="flex flex-col rounded-lg shadow-lg border overflow-hidden">
+    return <div className="flex flex-col rounded-xl shadow-lg border border-gray-200 overflow-hidden">
         <div className="flex-shrink-0">
             <img className="h-48 w-full object-cover"
                  src={img}
