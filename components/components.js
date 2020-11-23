@@ -14,7 +14,7 @@ export default function HeroBanner(props) {
                         <i className="fab fa-twitter text-xl mt-1"/>
                     </button>
                     <button className="mini-button mr-4" onClick={() => {
-                        location.href = 'https://www.linkedin.com/in/nathan-benavides-luu-18a51b68/';
+                        location.href = 'www.linkedin.com/in/nthnluu';
                     }}>
                         <i className="fab fa-linkedin-in text-xl mt-1"/>
                     </button>
