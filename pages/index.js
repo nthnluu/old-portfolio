@@ -4,13 +4,13 @@ import BlogCard from "../components/BlogCard";
 const pageData = {
     projects: [{
         title: "Sheetroom",
-        description: "An online platform for building beautiful online quizzes.",
+        description: "An online assessment platform with a drag-and-drop quiz builder, embeddable graphs and formulas, and a customizable scoring algorithm.",
         image: "/sheetroom_ss.png",
         href: "https://www.sheetroom.com"
     }, {
         title: "Venture at Brown",
-        description: "A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill.",
-        image: "https://ventureatbrown.com/placeholder_bear.svg",
+        description: "A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill by providing personalized resource recommendations.",
+        image: "unexperienced_brown.svg",
         href: "https://ventureatbrown.com/"
     }, {
         title: "Swipetune",
@@ -22,24 +22,34 @@ const pageData = {
     skills: [
         {
             title: "Languages",
-            items: ["Javascript", "Typescript", "Python", "Swift"]
+            items: ["Javascript", "Typescript", "Python", "Swift", "HTML", "CSS", "SCSS"]
         },
         {
             title: "Frameworks",
-            items: ["React", "Next.js", "Vue", "Django", "SwiftUI", "UI Kit"]
+            items: ["React", "Next.js", "Vue", "Django", "Node.js", "Express", "SwiftUI", "UI Kit"]
         },
         {
-            title: "Other Technologies",
-            items: ["Heroku", "AWS Lambda", "Cloud Firestore", "Firebase Authentication", "Google Cloud Functions", "GraphQL", "REST"]
+            title: "APIs/Databases",
+            items: ["Postgres", "MongoDB", "Cloud Firestore", "GraphQL", "REST"]
+
+        },
+        {
+            title: "Libraries and Services",
+            items: ["Heroku", "AWS Lambda", "Firebase Authentication", "Google Cloud Functions", "Pandas"]
+        },
+        {
+            title: "Other Tools",
+            items: ["Google Analytics", "Git", "Wordpress", "Google Workspace", "Office 365", "Photoshop", "Illustrator", "Adobe XD", "Final Cut Pro"]
         }
     ]
 
 }
 
 const SkillSection = ({title, skills}) => (<div className="mb-4">
-    <h2 className="text-lg mb-2">{title}</h2>
+    <h2 className="text-sm uppercase text-gray-700 font-medium mb-2">{title}</h2>
     <ul className="flex justify-start items-center flex-wrap">
-        {skills.map((skill, index) => <li key={index} className="skill-capsule">
+        {skills.map((skill, index) => <li key={index}
+                                          className="border shadow-sm text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
             {skill}
         </li>)}
     </ul>
@@ -47,7 +57,22 @@ const SkillSection = ({title, skills}) => (<div className="mb-4">
 
 export default () => (
     <div className="max-w-5xl mx-auto px-4 mb-24">
-        <div className="hero-backdrop leading-relaxed py-24 text-gray-800">
+        <div className="flex justify-end items-center py-6 space-x-2">
+            <a className="top-link" href="https://github.com/nthnluu">
+                <i className="fab fa-github"/>
+                <span className="sr-only">GitHub</span>
+            </a>
+            <a className="top-link" href="https://www.linkedin.com/in/nthnluu/">
+                <i className="fab fa-linkedin"/>
+                <span className="sr-only">Linkedin</span>
+            </a>
+            <a className="top-link w-auto text-base px-4"
+               href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=92f2d5c4-8695-4626-990f-6fc0b4621206">
+                <i className="fas fa-file-alt mr-2 text-xl"/>
+                Resume
+            </a>
+        </div>
+        <div className="leading-relaxed pb-16 text-gray-800">
             <h1 className="text-xl">Hello! 👋 My name is</h1>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 <h2 className="">Nathan Benavides-Luu.</h2>
@@ -63,7 +88,7 @@ export default () => (
         </div>
         <div className="relative bg-gray-50 pt-16 pb-24">
             <div className="absolute inset-0">
-                <div className="bg-white h-1/3 sm:h-2/3"></div>
+                <div className="bg-white h-1/3 sm:h-2/3"/>
             </div>
             <div className="relative mx-auto">
                 <div className="text-left">

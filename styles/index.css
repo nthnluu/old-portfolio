@@ -44,8 +44,8 @@ body {
     margin-bottom: var(--b-margin);
 }
 
-.skill-capsule {
-    @apply border shadow-sm text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2
+.top-link {
+    @apply text-xl w-10 h-10 rounded-full bg-gray-200 inline-flex items-center justify-center
 }
 
 
