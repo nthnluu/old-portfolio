@@ -10,7 +10,7 @@ const pageData = {
         href: "https://www.sheetroom.com"
     }, {
         title: "Venture at Brown",
-        description: "A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill by providing personalized resource recommendations.",
+        description: "A guide that helps Brown and RISD students navigate the entrepreneurial resources on College Hill by providing personalized resource recommendations.",
         image: "unexperienced_brown.svg",
         href: "https://ventureatbrown.com/"
     }, {
