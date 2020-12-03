@@ -31,7 +31,7 @@ const pageData = {
         },
         {
             title: "APIs/Databases",
-            items: ["Postgres", "MongoDB", "Cloud Firestore", "GraphQL", "REST"]
+            items: ["Postgres", "MongoDB", "Cloud Firestore", "CoreData", "Realm", "GraphQL", "REST"]
 
         },
         {
