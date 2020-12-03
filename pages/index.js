@@ -1,11 +1,66 @@
-import HeroBanner, {Skill} from "../components/components";
 import React from "react";
 import BlogCard from "../components/BlogCard";
 
+const pageData = {
+    projects: [{
+        title: "Sheetroom",
+        description: "An online platform for building beautiful online quizzes.",
+        image: "/sheetroom_ss.png",
+        href: "https://www.sheetroom.com"
+    }, {
+        title: "Venture at Brown",
+        description: "A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill.",
+        image: "https://ventureatbrown.com/placeholder_bear.svg",
+        href: "https://ventureatbrown.com/"
+    }, {
+        title: "Swipetune",
+        description: "A simple way to create playlists discover new music. Powered by the Spotify API.",
+        image: "/swipetune.png",
+        href: "https://www.sheetroom.com",
+        inProgress: true
+    }],
+    skills: [
+        {
+            title: "Languages",
+            items: ["Javascript", "Typescript", "Python", "Swift"]
+        },
+        {
+            title: "Frameworks",
+            items: ["React", "Next.js", "Vue", "Django", "SwiftUI", "UI Kit"]
+        },
+        {
+            title: "Other Technologies",
+            items: ["Heroku", "AWS Lambda", "Cloud Firestore", "Firebase Authentication", "Google Cloud Functions", "GraphQL", "REST"]
+        }
+    ]
+
+}
+
+const SkillSection = ({title, skills}) => (<div className="mb-4">
+    <h2 className="text-lg mb-2">{title}</h2>
+    <ul className="flex justify-start items-center flex-wrap">
+        {skills.map((skill, index) => <li key={index} className="skill-capsule">
+            {skill}
+        </li>)}
+    </ul>
+</div>)
+
 export default () => (
-    <div className="max-w-5xl mx-auto px-4">
-        <HeroBanner h1="Hi, my name is" h2="Nathan Benavides-Luu." h3="I build stuff for the web."
-                    paragraph="I'm an 18 year old student from San Diego, CA who loves building cool things with code."/>
+    <div className="max-w-5xl mx-auto px-4 mb-24">
+        <div className="hero-backdrop leading-relaxed py-24 text-gray-800">
+            <h1 className="text-xl">Hello! 👋 My name is</h1>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                <h2 className="">Nathan Benavides-Luu.</h2>
+                <h3>I build things for the web.</h3>
+            </div>
+            <p className="max-w-3xl mt-5 text-lg md:text-xl text-gray-700">
+                I’m a first-year <strong>computer science/applied mathematics</strong> student at
+                <strong> Brown University</strong> and an entrepreneurial full-stack
+                developer with a passion for education technology. I explore ways to make technology more accessible and
+                useful in public education. I have experience building accessible and user-friendly websites and iOS
+                apps.
+            </p>
+        </div>
         <div className="relative bg-gray-50 pt-16 pb-24">
             <div className="absolute inset-0">
                 <div className="bg-white h-1/3 sm:h-2/3"></div>
@@ -16,25 +71,19 @@ export default () => (
                         Latest
                     </h2>
                 </div>
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none">
-                    <BlogCard title="Venture at Brown" desc="A guide to help Brown and RISD students navigate the entrepreneurial resources on College Hill." category="Web Dev" img="https://ventureatbrown.com/placeholder_bear.svg" link="https://ventureatbrown.com/"/>
-                    <BlogCard title="Sheetroom" desc="An online platform for designing beautiful online assignments." category="Web Dev" img="/sheetroom_ss.png" link="https://www.sheetroom.com"/>
-                    <BlogCard title="Swipetune" desc="A simple way to create playlists discover new music. Powered by the Spotify API." category="Web Dev" img="/swipetune.png" link="https://www.sheetroom.com"/>
+                <div className="mt-12 grid gap-5 mx-auto md:grid-cols-2 lg:max-w-none">
+                    {pageData.projects.map((project, index) => <BlogCard key={index} title={project.title}
+                                                                         desc={project.description}
+                                                                         category={project.inProgress && "IN PROGRESS"}
+                                                                         img={project.image}
+                                                                         link={project.href}/>)}
                 </div>
             </div>
         </div>
-
-        <div className="skills-backdrop p-8 md:p-16">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
-                <Skill img="/frontend.png" title="Frontend"/>
-                <Skill img="/backend.png" title="Backend"/>
-                <Skill img="/ui_design.png" title="UI Design"/>
-
-
-                <Skill img="/cal.png" title="Dependable, Persistent and Productive"/>
-                <Skill img="/learner.png" title="Fast and Adaptable Learner"/>
-                <Skill img="/teamwork.png" title="Leadership and Collaboration"/>
-            </div>
+        <div>
+            <h1 className="text-3xl font-bold mb-4">Skills</h1>
+            {pageData.skills.map((section, index) => <SkillSection key={index} title={section.title}
+                                                                   skills={section.items}/>)}
         </div>
     </div>
 )

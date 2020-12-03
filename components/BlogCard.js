@@ -9,7 +9,7 @@ export default function ({title, desc, category, img, link}){
         </div>
         <div className="flex-1 bg-white p-6 flex flex-col justify-between">
             <div className="flex-1">
-                <p className="text-sm leading-5 font-medium text-blue-600">
+                <p className="text-sm leading-5 font-medium text-teal-600">
                     <a className="hover:underline">
                         {category}
                     </a>
