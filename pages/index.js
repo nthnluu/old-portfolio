@@ -14,6 +14,11 @@ const pageData = {
         image: "unexperienced_brown.svg",
         href: "https://ventureatbrown.com/"
     }, {
+        title: "Is it GG?",
+        description: "A binary logistic algorithm that predicts whether you won or lost a League game based on your current in-game stats.",
+        image: "/league.jpg",
+        href: "https://github.com/nthnluu/is-it-gg",
+    }, {
         title: "Swipetune",
         description: "A simple way to create playlists discover new music. Powered by the Spotify API.",
         image: "/swipetune.png",
@@ -23,11 +28,11 @@ const pageData = {
     skills: [
         {
             title: "Languages",
-            items: ["Javascript", "Typescript", "Python", "Swift", "HTML", "CSS", "SCSS"]
+            items: ["Javascript", "Typescript", "Python", "Swift", "HTML", "CSS", "SCSS", "Pyret", "Racket"]
         },
         {
             title: "Frameworks",
-            items: ["React", "Next.js", "Vue", "Django", "Node.js", "Express", "SwiftUI", "UI Kit"]
+            items: ["React", "Next.js", "Vue", "Django", "Node.js", "Express", "SwiftUI", "UI Kit", "Hasura", "Apollo", "Storyboards", "React Native"]
         },
         {
             title: "APIs/Databases",
@@ -35,22 +40,22 @@ const pageData = {
 
         },
         {
-            title: "Libraries and Services",
-            items: ["Heroku", "AWS Lambda", "Firebase Authentication", "Google Cloud Functions", "Pandas"]
+            title: "Web Libraries and Services",
+            items: ["Heroku", "AWS Lambda", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Docker", "Git", "Wordpress", "Jupyter Notebook"]
         },
         {
             title: "Other Tools",
-            items: ["Google Analytics", "Git", "Wordpress", "Google Workspace", "Office 365", "Photoshop", "Illustrator", "Adobe XD"]
+            items: ["Google Analytics", "Google Workspace", "Microsoft 365", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Final Cut Pro"]
         }
     ]
 
 }
 
-const SkillSection = ({title, skills}) => (<div className="mb-4">
+const SkillSection = ({title, skills}) => (<div className="mb-8">
     <h2 className="text-sm uppercase text-gray-700 font-medium mb-2">{title}</h2>
     <ul className="flex justify-start items-center flex-wrap">
         {skills.map((skill, index) => <li key={index}
-                                          className="border shadow-sm text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
+                                          className="border shadow-sm md:text-lg text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
             {skill}
         </li>)}
     </ul>
@@ -99,7 +104,7 @@ export default () => (
                 <div className="relative mx-auto">
                     <div className="text-left">
                         <h2 className="text-3xl leading-9 tracking-tight font-bold text-gray-800 sm:text-4xl sm:leading-10">
-                            Latest
+                            Projects
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-5 mx-auto md:grid-cols-2 lg:max-w-none">
