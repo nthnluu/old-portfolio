@@ -77,7 +77,7 @@ export default () => (
                     <span className="sr-only">Linkedin</span>
                 </a>
                 <a className="top-link w-auto text-base px-4"
-                   href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=92f2d5c4-8695-4626-990f-6fc0b4621206">
+                   href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=d643b2d5-9442-4db3-85a3-efbaf9f294e7">
                     <i className="fas fa-file-alt mr-2 text-xl"/>
                     Resume
                 </a>
