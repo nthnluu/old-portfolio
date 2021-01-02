@@ -19,11 +19,10 @@ const pageData = {
         image: "/league.jpg",
         href: "https://github.com/nthnluu/is-it-gg",
     }, {
-        title: "Swipetune",
-        description: "A simple way to create playlists discover new music. Powered by the Spotify API.",
+        title: "Mixtape",
+        description: "Powered by the Spotify API and your preferences, Mixtape lets you quickly preview songs and add them to your playlists.",
         image: "/swipetune.png",
-        href: "https://www.sheetroom.com",
-        inProgress: true
+        href: "https://www.sheetroom.com"
     }],
     skills: [
         {
@@ -110,7 +109,6 @@ export default () => (
                     <div className="mt-12 grid gap-5 mx-auto md:grid-cols-2 lg:max-w-none">
                         {pageData.projects.map((project, index) => <BlogCard key={index} title={project.title}
                                                                              desc={project.description}
-                                                                             category={project.inProgress && "IN PROGRESS"}
                                                                              img={project.image}
                                                                              link={project.href}/>)}
                     </div>
