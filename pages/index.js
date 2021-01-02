@@ -21,7 +21,7 @@ const pageData = {
     }, {
         title: "Mixtape",
         description: "Powered by the Spotify API and your preferences, Mixtape lets you quickly preview songs and add them to your playlists.",
-        image: "/swipetune.png",
+        image: "/mixtape.png",
         href: "https://www.sheetroom.com"
     }],
     skills: [
