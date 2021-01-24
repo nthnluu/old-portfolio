@@ -88,8 +88,8 @@ export default () => (
                     <h3>I build things for the web.</h3>
                 </div>
                 <p className="max-w-3xl mt-5 text-lg md:text-xl text-gray-700">
-                    I’m a first-year <strong>computer science/applied mathematics</strong> student at
-                    <strong> Brown University</strong> and an entrepreneurial full-stack
+                    I’m a <strong>first-year computer science</strong> student at
+                    <strong> Brown University</strong> and an <strong>incoming STEP intern</strong> at <strong>Google</strong>. I'm an entrepreneurial full-stack
                     developer with a passion for education technology. I explore ways to make technology more accessible
                     and
                     useful in public education. I have experience building accessible and user-friendly websites and iOS
