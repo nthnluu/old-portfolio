@@ -53,7 +53,7 @@ const pageData = {
 const SkillSection = ({title, skills}) => (<div className="mb-8">
     <h2 className="text-sm uppercase text-gray-700 font-medium mb-2">{title}</h2>
     <ul className="flex justify-start items-center flex-wrap">
-        {skills.map((skill, index) => <li key={index}
+        {skills.sort().map((skill, index) => <li key={index}
                                           className="border shadow-sm md:text-lg text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
             {skill}
         </li>)}
