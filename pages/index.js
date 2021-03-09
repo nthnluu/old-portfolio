@@ -40,7 +40,7 @@ const pageData = {
         },
         {
             title: "Web Libraries and Services",
-            items: ["Heroku", "AWS Lambda", "Docker", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Docker", "Git", "Wordpress", "Jupyter Notebook"]
+            items: ["Heroku", "AWS Lambda", "Docker", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Git", "Wordpress", "Jupyter Notebook"]
         },
         {
             title: "Other Tools",
