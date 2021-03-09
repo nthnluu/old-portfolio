@@ -40,11 +40,11 @@ const pageData = {
         },
         {
             title: "Web Libraries and Services",
-            items: ["Heroku", "AWS Lambda", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Docker", "Git", "Wordpress", "Jupyter Notebook"]
+            items: ["Heroku", "AWS Lambda", "Docker", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Docker", "Git", "Wordpress", "Jupyter Notebook"]
         },
         {
             title: "Other Tools",
-            items: ["Google Analytics", "Google Workspace", "Microsoft 365", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Final Cut Pro"]
+            items: ["Google Analytics", "Google Workspace", "Microsoft 365", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Lottie Web", "Selenium"]
         }
     ]
 
