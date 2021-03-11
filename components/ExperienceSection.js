@@ -9,8 +9,8 @@ export default function ExperienceSection({experiences}) {
                     <div className="relative flex items-start space-x-3">
                         <div className="relative">
                             <img
-                                className="h-12 w-12 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"
-                                src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80"
+                                className="h-12 w-12 rounded-full bg-gray-100 border shadow flex items-center justify-center ring-8 ring-white"
+                                src={experience.image}
                                 alt=""/>
                         </div>
                         <div className="min-w-0 flex-1">
