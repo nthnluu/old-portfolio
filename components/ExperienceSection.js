@@ -4,7 +4,7 @@ export default function ExperienceSection({experiences}) {
 
             {experiences.map((experience, index) => <li key={index}>
                 <div className="relative pb-8">
-                    {index !== (experiences.length - 1) && <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"/>}
+                    {index !== (experiences.length - 1) && <span className="absolute top-6 left-6 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"/>}
 
                     <div className="relative flex items-start space-x-3">
                         <div className="relative">
