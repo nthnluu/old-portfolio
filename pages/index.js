@@ -2,6 +2,7 @@ import React from "react";
 import BlogCard from "../components/BlogCard";
 import Head from "next/head";
 import ZoomModal from "../components/ZoomModal";
+import ExperienceSection from "../components/ExperienceSection";
 
 const pageData = {
     projects: [{
@@ -55,9 +56,10 @@ const pageData = {
         },
         {
             title: "Other Tools and Services",
-            items: ["Pandas", "Git", "Wordpress", "Jupyter Notebook", "Linux/UNIX", "Figma", "Adobe XD", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Premier Pro", "Final Cut Pro", "Lottie Web", "Selenium", "Sequelize", "Unity 3D"]
+            items: ["Pandas", "Git", "Wordpress", "Jupyter Notebook", "Linux/UNIX", "Figma", "Adobe XD", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Premier Pro", "Lottie Web", "Selenium", "Sequelize", "Unity 3D"]
         }
-    ]
+    ],
+    experience: [{title: "Incoming STEP Intern!", company: "Google", location: "Mountain View, CA", start: "Jan 2021", end: "Present", description: "hello!"}, {title: "Incoming STEP Intern2", company: "Google", location: "Mountain View, CA", start: "Jan 2021", end: "Present", description: "hello!"}]
 
 }
 
@@ -71,7 +73,7 @@ const SkillSection = ({title, skills}) => (<div className="mb-8">
     </ul>
 </div>)
 
-export default () => {
+export default function Home () {
     const openZoom = () => {
         if (window.confirm('You are about to join my personal meeting room. Are you sure you want to continue?')) {
             window.location.href = "https://zoom.nthnluu.com/"
@@ -117,13 +119,13 @@ export default () => {
                 {/*    Resume*/}
                 {/*</a>*/}
             </div>
-            <div className="leading-relaxed pb-12 text-gray-800">
-                <h1 className="text-xl">{timeGreeting()}! 👋 My name is</h1>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <div className="pb-12 text-gray-800">
+                <h1 className="text-2xl">{timeGreeting()}! 👋 My name is</h1>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
                     <h2 className="">Nathan Benavides-Luu.</h2>
                     <h3>I build things for the web.</h3>
                 </div>
-                <p className="max-w-3xl mt-5 text-lg md:text-xl text-gray-700">
+                <p className="max-w-4xl mt-5 text-lg md:text-xl text-gray-500">
                     I’m a first-year computer science student at Brown University, an incoming software engineering
                     (STEP) intern at Google, and an entrepreneurial full-stack developer with a passion for education
                     technology. With my experience building accessible and user-friendly websites and iOS apps, I
@@ -148,11 +150,16 @@ export default () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="pb-24">
                 <h1 className="text-3xl font-bold mb-4">Skills</h1>
                 {pageData.skills.map((section, index) => <SkillSection key={index} title={section.title}
                                                                        skills={section.items}/>)}
             </div>
+
+            {/*<div>*/}
+            {/*    <h1 className="text-3xl font-bold mb-6">Experience</h1>*/}
+            {/*    <ExperienceSection experiences={pageData.experience}/>*/}
+            {/*</div>*/}
         </div>
     </>
 }
