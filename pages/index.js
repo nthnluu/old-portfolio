@@ -1,6 +1,7 @@
 import React from "react";
 import BlogCard from "../components/BlogCard";
 import Head from "next/head";
+import ZoomModal from "../components/ZoomModal";
 
 const pageData = {
     projects: [{
@@ -9,9 +10,19 @@ const pageData = {
         image: "/sheetroom_ss.png",
         href: "https://www.sheetroom.com"
     }, {
+        title: "Nelson Bot",
+        description: "A serverless Python bot that automatically reserves your preferred time slots at the Brown University Nelson Fitness Center.",
+        image: "/nelsonbit.png",
+        href: "https://mixtape.nthnluu.vercel.app"
+    }, {
         title: "Venture at Brown",
         description: "A guide that helps Brown and RISD students navigate the entrepreneurial resources on College Hill by providing personalized resource recommendations.",
         image: "unexperienced_brown.svg",
+        href: "https://ventureatbrown.com/"
+    }, {
+        title: "Build at Brown",
+        description: "A website with online courses, tutorials, open-source projects, and other resources for the Brown entrepreneurial community.",
+        image: "frontend.png",
         href: "https://ventureatbrown.com/"
     }, {
         title: "Is it GG?",
@@ -54,14 +65,19 @@ const SkillSection = ({title, skills}) => (<div className="mb-8">
     <h2 className="text-sm uppercase text-gray-700 font-medium mb-2">{title}</h2>
     <ul className="flex justify-start items-center flex-wrap">
         {skills.sort().map((skill, index) => <li key={index}
-                                          className="border shadow-sm md:text-lg text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
+                                                 className="border shadow-sm md:text-lg text-gray-800 py-1 px-3 rounded-full flex-shrink-0 mr-2 mb-2">
             {skill}
         </li>)}
     </ul>
 </div>)
 
-export default () => (
-    <>
+export default () => {
+    const openZoom = () => {
+        if (window.confirm('You are about to join my personal meeting room. Are you sure you want to continue?')) {
+            window.location.href = "https://zoom.nthnluu.com/"
+        }
+    }
+    return <>
         <Head>
             <title>Nathan Benavides-Luu</title>
         </Head>
@@ -75,11 +91,15 @@ export default () => (
                     <i className="fab fa-linkedin"/>
                     <span className="sr-only">Linkedin</span>
                 </a>
-                <a className="top-link w-auto text-base px-4"
-                   href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=d643b2d5-9442-4db3-85a3-efbaf9f294e7">
-                    <i className="fas fa-file-alt mr-2 text-xl"/>
-                    Resume
-                </a>
+                <button onClick={openZoom} className="top-link">
+                    <i className="fas fa-video"/>
+                    <span className="sr-only">Zoom</span>
+                </button>
+                {/*<a className="top-link w-auto text-base px-4"*/}
+                {/*   href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=d643b2d5-9442-4db3-85a3-efbaf9f294e7">*/}
+                {/*    <i className="fas fa-file-alt mr-2 text-xl"/>*/}
+                {/*    Resume*/}
+                {/*</a>*/}
             </div>
             <div className="leading-relaxed pb-12 text-gray-800">
                 <h1 className="text-xl">Hello! 👋 My name is</h1>
@@ -88,12 +108,10 @@ export default () => (
                     <h3>I build things for the web.</h3>
                 </div>
                 <p className="max-w-3xl mt-5 text-lg md:text-xl text-gray-700">
-                    I’m a first-year computer science student at
-                    Brown University and an incoming software engineering (STEP) intern at Google. I'm an entrepreneurial full-stack
-                    developer with a passion for education technology. I explore ways to make technology more accessible
-                    and
-                    useful in public education. I have experience building accessible and user-friendly websites and iOS
-                    apps.
+                    I’m a first-year computer science student at Brown University and an incoming software engineering
+                    (STEP) intern at Google. I'm an entrepreneurial full-stack developer with a passion for education
+                    technology. I explore ways to make technology more accessible and useful in public education. I have
+                    experience building accessible and user-friendly websites and iOS apps.
                 </p>
             </div>
             <div className="relative bg-gray-50 pt-16 pb-24">
@@ -121,4 +139,4 @@ export default () => (
             </div>
         </div>
     </>
-)
+}
