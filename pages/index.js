@@ -38,24 +38,24 @@ const pageData = {
     skills: [
         {
             title: "Languages",
-            items: ["Javascript", "Typescript", "Python", "Swift", "HTML", "CSS", "SCSS", "Pyret", "Racket"]
+            items: ["Javascript", "Typescript", "Python", "Swift", "HTML", "CSS", "SCSS", "Pyret", "Racket", "Java", "Scala", "C#"]
         },
         {
-            title: "Frameworks",
-            items: ["React", "Next.js", "Vue", "Django", "Node.js", "Express", "SwiftUI", "UI Kit", "Hasura", "Apollo", "Storyboards", "React Native"]
+            title: "Front-End",
+            items: ["React", "Next.js", "Vue", "SwiftUI", "UI Kit", "Storyboards", "React Native", "jQuery", "Tailwind CSS"]
         },
         {
-            title: "APIs/Databases",
-            items: ["Postgres", "MongoDB", "Cloud Firestore", "CoreData", "Realm", "GraphQL", "REST"]
+            title: "Back-End",
+            items: ["Database Architecture", "Django", "FastAPI", "Flask", "Node.js", "Express", "MongoDB", "Cloud Firestore", "CoreData", "Realm", "GraphQL", "REST", "OAuth 2.0", "JWT Authentication"]
 
         },
         {
-            title: "Web Libraries and Services",
-            items: ["Heroku", "AWS Lambda", "Docker", "Firebase Authentication", "Google Cloud Functions", "Pandas", "Git", "Wordpress", "Jupyter Notebook"]
+            title: "Dev-Ops/Cloud Services",
+            items: ["Heroku", "AWS Lambda", "AWS EC2", "AWS CloudFormation", "Docker", "Google Identity Platform", "Google Cloud Functions", "Google Cloud Storage", "Firebase"]
         },
         {
-            title: "Other Tools",
-            items: ["Google Analytics", "Google Workspace", "Microsoft 365", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Lottie Web", "Selenium"]
+            title: "Other Tools and Services",
+            items: ["Pandas", "Git", "Wordpress", "Jupyter Notebook", "Linux/UNIX", "Figma", "Adobe XD", "Photoshop", "Illustrator", "Adobe XD", "After Effects", "Premier Pro", "Final Cut Pro", "Lottie Web", "Selenium", "Sequelize", "Unity 3D"]
         }
     ]
 
@@ -76,6 +76,22 @@ export default () => {
         if (window.confirm('You are about to join my personal meeting room. Are you sure you want to continue?')) {
             window.location.href = "https://zoom.nthnluu.com/"
         }
+    }
+
+    const timeGreeting = () => {
+        const currDate = new Date();
+        const hours = currDate.getHours();
+        let greeting;
+
+        if (hours < 12) {
+            greeting = "Good morning"
+        } else if (hours >= 12 && hours <= 17) {
+            greeting = "Good afternoon"
+        } else {
+            greeting = "Good evening"
+        }
+
+        return greeting;
     }
     return <>
         <Head>
@@ -102,16 +118,16 @@ export default () => {
                 {/*</a>*/}
             </div>
             <div className="leading-relaxed pb-12 text-gray-800">
-                <h1 className="text-xl">Hello! 👋 My name is</h1>
+                <h1 className="text-xl">{timeGreeting()}! 👋 My name is</h1>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                     <h2 className="">Nathan Benavides-Luu.</h2>
                     <h3>I build things for the web.</h3>
                 </div>
                 <p className="max-w-3xl mt-5 text-lg md:text-xl text-gray-700">
-                    I’m a first-year computer science student at Brown University and an incoming software engineering
-                    (STEP) intern at Google. I'm an entrepreneurial full-stack developer with a passion for education
-                    technology. I explore ways to make technology more accessible and useful in public education. I have
-                    experience building accessible and user-friendly websites and iOS apps.
+                    I’m a first-year computer science student at Brown University, an incoming software engineering
+                    (STEP) intern at Google, and an entrepreneurial full-stack developer with a passion for education
+                    technology. With my experience building accessible and user-friendly websites and iOS apps, I
+                    explore ways to make technology more accessible and useful in public education.
                 </p>
             </div>
             <div className="relative bg-gray-50 pt-16 pb-24">
