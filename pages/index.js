@@ -158,18 +158,16 @@ export default function Home() {
                     <i className="fas fa-video"/>
                     <span className="sr-only">Zoom</span>
                 </button>
-                {/*<a className="top-link w-auto text-base px-4"*/}
-                {/*   href="https://firebasestorage.googleapis.com/v0/b/momentum-32de9.appspot.com/o/Resume%20(2).pdf?alt=media&token=d643b2d5-9442-4db3-85a3-efbaf9f294e7">*/}
-                {/*    <i className="fas fa-file-alt mr-2 text-xl"/>*/}
-                {/*    Resume*/}
-                {/*</a>*/}
             </div>
             <div className="pb-12 text-gray-800">
-                <h1 className="text-2xl">{timeGreeting()}! 👋 My name is</h1>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
-                    <h2 className="">Nathan Benavides-Luu.</h2>
-                    <h3>I build things for the web.</h3>
-                </div>
+                <h1>
+                    <span className="text-2xl">{timeGreeting()}! 👋 My name is</span>
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
+                        <div>Nathan Benavides-Luu.</div>
+                        <div>I build things for the web.</div>
+                    </div>
+                </h1>
+
                 <p className="max-w-4xl mt-5 text-lg md:text-xl text-gray-500">
                     I’m a first-year computer science student at Brown University, an incoming software engineering
                     (STEP) intern at Google, and an entrepreneurial full-stack developer with a passion for education
@@ -194,13 +192,13 @@ export default function Home() {
             </div>
 
             <div>
-                <h1 className="text-3xl font-bold mb-6">Experience</h1>
+                <h2 className="text-3xl font-bold mb-6">Experience</h2>
                 <ExperienceSection experiences={pageData.experience}/>
             </div>
 
 
             <div className="pt-24">
-                <h1 className="text-3xl font-bold mb-4">Skills</h1>
+                <h2 className="text-3xl font-bold mb-4">Skills</h2>
                 {pageData.skills.map((section, index) => <SkillSection key={index} title={section.title}
                                                                        skills={section.items}/>)}
             </div>

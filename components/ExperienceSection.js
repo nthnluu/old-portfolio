@@ -16,10 +16,10 @@ export default function ExperienceSection({experiences}) {
                         <div className="min-w-0 flex-1">
                             <div>
                                 <div className="text-lg">
-                                    <a href="#" className="font-semibold text-gray-900">{experience.title}</a>
+                                    <h3 className="font-semibold text-gray-800">{experience.title}</h3>
                                 </div>
                                 <div>
-                                    <a href="#" className="font-medium text-gray-600">{experience.company}</a>
+                                    <p className="font-medium text-gray-600">{experience.company}</p>
                                 </div>
                                 <p className="mt-0.5 text-sm text-gray-500">
                                     {experience.start} - {experience.end}
