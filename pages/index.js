@@ -57,7 +57,7 @@ const pageData = {
         },
         {
             title: "Dev-Ops/Cloud Services",
-            items: ["Heroku", "AWS Lambda", "AWS EC2", "AWS CloudFormation", "Docker", "Google Identity Platform", "Google Cloud Functions", "Google Cloud Storage", "Firebase"]
+            items: ["AWS S3", "Heroku", "AWS Lambda", "AWS EC2", "AWS CloudFormation", "Docker", "Google Identity Platform", "Google Cloud Functions", "Google Cloud Storage", "Firebase"]
         },
         {
             title: "Other Tools and Services",
