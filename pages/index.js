@@ -93,7 +93,7 @@ const pageData = {
             image: "/ep.png"
         },
         {
-            title: "Product Manager",
+            title: "Student Worker",
             company: "County of San Diego",
             location: "San Diego, CA",
             start: "May 2019",
