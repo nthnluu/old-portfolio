@@ -19,7 +19,7 @@ const pageData = {
         title: "Nelson Bot",
         description: "A serverless Python bot that automatically reserves your preferred time slots at the Brown University Nelson Fitness Center.",
         image: "/nelsonbit.png",
-        href: "https://mixtape.nthnluu.vercel.app"
+        href: "https://github.com/nthnluu/nelsonbot"
     }, {
         title: "Venture at Brown",
         description: "A guide that helps Brown and RISD students navigate the entrepreneurial resources on College Hill by providing personalized resource recommendations.",
