@@ -140,36 +140,25 @@ export default function Home() {
     }
 
     useEffect(() => {
-        updateTheme()
-    }, []);
-
-    const updateTheme = () => {
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setDarkMode(true)
         } else {
             setDarkMode(false)
         }
-    }
+    }, []);
 
     const toggleDarkMode = () => {
-        if (localStorage.theme === 'dark') {
-            localStorage.theme = 'light'
-        } else {
-            localStorage.theme = 'dark'
-        }
-
-        updateTheme();
+        setDarkMode(!darkMode);
     }
 
 
-    return <div className={darkMode && "dark"}>
+    return <div className={darkMode ? "dark" : " "}>
         <Head>
             <title>Nathan Benavides-Luu</title>
         </Head>
         <div className="bg-white dark:bg-gray-900">
             <div className="max-w-5xl mx-auto px-4 mb-24">
-                <div className="flex justify-start sm:justify-end items-center py-6 space-x-2">
+                <div className="flex justify-end items-center py-6 space-x-2">
                     <button onClick={toggleDarkMode} className="top-link">
                         <i className={`fas ${darkMode ? "fa-sun" : "fa-moon"}`}/>
                         <span className="sr-only">Switch to light mode</span>
@@ -191,7 +180,7 @@ export default function Home() {
                         <span className="sr-only">Zoom</span>
                     </button>
                 </div>
-                <div className="pb-12 text-gray-800 dark:text-gray-100">
+                <div className="pt-6 sm:pt-0 pb-12 text-gray-800 dark:text-gray-100">
                     <h1>
                         <span className="text-2xl">{timeGreeting()}! 👋 My name is</span>
                         <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
