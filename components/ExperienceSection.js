@@ -9,7 +9,7 @@ export default function ExperienceSection({experiences}) {
                     <div className="relative flex items-start space-x-3">
                         <div className="relative">
                             <img
-                                className="h-12 w-12 rounded-full bg-gray-100 dark:bg-gray-800 border shadow flex items-center justify-center dark:ring-8 ring-white dark:ring-transparent"
+                                className="h-12 w-12 rounded-full bg-gray-100 dark:bg-gray-800 border shadow flex items-center justify-center ring-8 ring-white dark:ring-gray-900"
                                 src={experience.image}
                                 alt=""/>
                         </div>
