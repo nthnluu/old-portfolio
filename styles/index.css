@@ -50,5 +50,19 @@ body {
     @apply text-xl w-10 h-10 rounded-full bg-gray-200 inline-flex items-center justify-center border dark:bg-transparent dark:border-gray-700 dark:text-white focus:ring-1 focus:outline-none
 }
 
+.thumbnail {
+    position: absolute;
+    top: 0;
+    z-index: -5000;
+    width: 0px;
+    height: 0px;
+}
+
+.thumbnail img {
+    object-fit: cover;
+    width: 0px;
+    height: 0px;
+}
+
 
 @tailwind utilities;
