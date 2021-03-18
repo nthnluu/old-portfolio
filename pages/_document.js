@@ -29,7 +29,7 @@ class MyDocument extends Document {
                     <meta
                         name="image"
                         property="og:image"
-                        content="%PUBLIC_URL%/thumbnail.jpg"
+                        content="/thumbnail.jpg"
                     />
                     <meta
                         name="author"
