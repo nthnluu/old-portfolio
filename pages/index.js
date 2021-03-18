@@ -157,9 +157,6 @@ export default function Home() {
             <title>Nathan Benavides-Luu</title>
         </Head>
         <div className="bg-white dark:bg-gray-900">
-            <div className="thumbnail">
-                <img src="/thumbnail.jpg" alt=""/>
-            </div>
             <div className="max-w-5xl mx-auto px-4 mb-24">
                 <div className="flex justify-end items-center py-6 space-x-2">
                     <button onClick={toggleDarkMode} className="top-link">
