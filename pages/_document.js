@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html prefix="og: http://ogp.me/ns#">
                 <Head>
                     {/*Favicons*/}
                     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -20,6 +20,28 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
                     {/*font awesome icons*/}
                     <script src="https://kit.fontawesome.com/aeb9fcb31a.js" crossOrigin="anonymous"></script>
+
+                    {/*metadata*/}
+                    <meta
+                        property="og:title"
+                        content="Nathan Benavides-Luu"
+                    />
+                    <meta
+                        name="image"
+                        property="og:image"
+                        content="%PUBLIC_URL%/thumbnail.jpg"
+                    />
+                    <meta
+                        name="author"
+                        content="Nathan Benavides-Luu"
+                    />
+                    <meta
+                        property="og:description"
+                        content="Learn more about me and what I'm up to!"
+                    />
+                    <meta
+                        property="og:url"
+                        content="https://nthnluu.com"/>
                 </Head>
                 <body>
                 <Main/>
