@@ -117,12 +117,6 @@ const SkillSection = ({title, skills}) => (<div className="mb-8">
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
 
-    const openZoom = () => {
-        if (window.confirm('You are about to join my personal meeting room. Are you sure you want to continue?')) {
-            window.location.href = "https://zoom.nthnluu.com/"
-        }
-    }
-
     const timeGreeting = () => {
         const currDate = new Date();
         const hours = currDate.getHours();
@@ -175,10 +169,6 @@ export default function Home() {
                         <i className="fab fa-instagram"/>
                         <span className="sr-only">Instagram</span>
                     </a>
-                    <button onClick={openZoom} className="top-link">
-                        <i className="fas fa-video"/>
-                        <span className="sr-only">Zoom</span>
-                    </button>
                 </div>
                 <div className="pt-6 sm:pt-0 pb-12 text-gray-800 dark:text-gray-100">
                     <h1>
